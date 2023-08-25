@@ -1,0 +1,11 @@
+# initialisation
+init	R	*CLS|*IDN?
+# DC current in a predefined range
+dcv	R	MEAS:VOLT:DC?
+acv	R	MEAS:VOLT:AC?
+res     R       MEAS:RES?
+vrange  R       VOLT:DC:RANGE:AUTO?
+# returns currently displayed value 
+sense	R	READ?|INIT|SYST:LOCAL
+error   R	SYST:ERR?
+measuring R	SENSE:FUNC?

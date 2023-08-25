@@ -1,0 +1,6 @@
+%initialisation
+%init	I	*IDN?
+volt   W   VOLT $data
+volt   R   MEAS:VOLT?
+dci   W   CURR $data
+dci   R   MEAS:CURR?

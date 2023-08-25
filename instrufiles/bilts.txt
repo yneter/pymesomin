@@ -1,0 +1,11 @@
+%initialisation
+init	R	i2|*idn?
+% Output ON/OFF Control
+on     W       	i2|outp on
+off     W       i2|outp off
+% DC voltage in a predefined range
+dcv	W	i2|volt $data
+dcv	R	i2|meas:volt?
+%Range
+rg12 	W	i2|volt:rang 12
+rg1 	W	i2|volt:rang 1.2

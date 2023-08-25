@@ -1,0 +1,10 @@
+%initialisation
+%init	R	OS|H0|E
+% Output ON/OFF Control
+% DC voltage in a predefined range
+dcv	W	SOURCE:VOLT:LEV $data
+dcv	R	SOURCE:VOLT:LEV?
+dci	W	SOURCE:CURR:LEV $data
+dci	R	SOURCE:CURR:LEV?
+measI	R	READ?
+measV	R	READ?

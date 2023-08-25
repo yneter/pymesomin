@@ -1,0 +1,8 @@
+%initialisation
+init	R	*CLS|*IDN?
+%DC current in a predefined range
+dcv	R	MEAS:VOLT:DC?
+acv	R	MEAS:VOLT:AC?
+res     R       MEAS:RES?
+temp     R       MEAS:TEMP?
+sense    R	SENSE:DATA?

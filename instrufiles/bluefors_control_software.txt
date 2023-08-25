@@ -1,0 +1,12 @@
+% parameter tree from bluefors software 
+% http://localhost:49099/values/
+% read instruction is converted to URL path according to 
+% mapper.bf.temperatures.tmixing -> http://localhost:49099/values/mapper/bf/temperatures/tmixing
+mc.temp 	R	mapper.bf.temperatures.tmixing
+fse.temp	R	mapper.bf.temperatures.tfse
+still.temp	R	mapper.bf.temperatures.tstill
+4k.temp		R	mapper.bf.temperatures.t4k
+50k.temp	R	mapper.bf.temperatures.t50k
+mag.temp	R	mapper.bf.temperatures.tmagnet
+compressor	R	driver.cpa.compressor_running_status
+flow		R	mapper.bf.flowmeter

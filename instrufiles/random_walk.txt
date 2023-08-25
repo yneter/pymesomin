@@ -1,0 +1,2 @@
+rand	R	 RAND?
+randsum R 	 RANDSUM?

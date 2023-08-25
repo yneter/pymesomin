@@ -1,0 +1,6 @@
+% read temperature for A 
+T1stage   R	KRDG? 1
+T2stage   R	KRDG? 2
+TpMag	  R	KRDG? 3
+TmMag     R	KRDG? 4
+THe4pot	  R	KRDG? 5

@@ -1,0 +1,7 @@
+%initialisation
+init	R	CURR:FILT ON|OUTP:RESP SLOW|SYST:BEEP:STAT OFF|*IDN?
+% DC current in a predefined range
+dci	W	CURR $data
+dci	R	CURR?
+off	W	SOUR:WAVE:OFFS $data
+off	R	SOUR:WAVE:OFFS?

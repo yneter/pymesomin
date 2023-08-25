@@ -1,0 +1,36 @@
+python - install anaconda - Anaconda3-2022.10-Windows-x86_64
+
+install NI drivers - https://www.ni.com/fr-fr/support/downloads/drivers/download/unpackaged.ni-device-drivers.327643.html
+
+pip install aiohttp
+pip install nest_asyncio
+pip install pyvisa
+pip install pyserial 
+pip install pymeasure
+pip install dash
+# for thorlabs spectro
+pip install instrumental-lib
+pip install pint
+
+# Jobin Yvon spectrometer 
+# not used but can be useful for horiba spectrometer 
+# pip install yaqd-horiba
+# installing driver from 
+https://sourceforge.net/projects/libusb-win32/files/libusb-win32-releases/1.2.6.0/
+# but trouble to find the correct device in the wizard list 
+#
+# then installed/used zadig 
+https://zadig.akeo.ie/
+# driver appeared in 'Periferiques Universal Serial Bus'
+# but usb.core.find still returns None 
+# then installed 
+libusb-win32-devel-filter-1.2.6.0.exe 
+# again 
+# and found the JY spectro in the wizard - after that usb.core.find worked 
+
+# possible libraries for controlling instruments 
+# 
+https://sweep-me.net/python_projects
+https://pyexplabsys.readthedocs.io/
+https://pylablib.readthedocs.io/en/latest/
+https://pyhard2.sourceforge.net/index.html

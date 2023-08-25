@@ -1,0 +1,41 @@
+%initialisation
+init	R	ID
+%controle de l'amplitude de l'oscillateur
+amp	R	OA.
+amp	W	OA. $data
+amp	max	10
+amp	min	0
+%controle de la fréquence de l'oscillateur
+freq	R	OF.
+freq	W	OF. $data
+freq	min	0.1
+freq	max	2000000
+%lecture des voie x et y
+x	R	X.
+y	R	Y.
+%controle des DAC
+dac1	R	DAC. 1
+dac1	W	DAC. 1 $data
+dac1	min	-10
+dac1	max	10
+dac2	R	DAC. 2
+dac2	W	DAC. 2 $data
+dac2	min	-10
+dac2	max	10
+dac3	R	DAC. 3
+dac3	W	DAC. 3 $data
+dac3	min	-10
+dac3	max	10
+dac4	R	DAC. 4
+dac4	W	DAC. 4 $data
+dac4	min	-10
+dac4	max	10
+%lecture des DC in
+dci1	R	ADC. 1
+dci2	R	ADC. 2
+%lecture de la sensibilité
+sens	R	SEN.
+sens	W	SEN $data
+sens	min	0
+sens	max	25
+%c'est fini

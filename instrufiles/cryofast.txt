@@ -1,0 +1,27 @@
+# temperature readings 
+fse.temp	R	temperature http://$address/channel/historical-data?channel_nr=7
+mc.temp		R	temperature http://$address/channel/historical-data?channel_nr=6 
+still.temp	R	temperature http://$address/channel/historical-data?channel_nr=5
+mag.temp	R	temperature http://$address/channel/historical-data?channel_nr=3
+4k.temp		R	temperature http://$address/channel/historical-data?channel_nr=2
+50k.temp	R	temperature http://$address/channel/historical-data?channel_nr=1
+# heater powers 
+# mixing chamber
+mc.setp		W	setpoint http://$address/heater/update?heater_nr=4
+mc.hpow		R	power http://$address/heater/historical-data?heater_nr=4
+mc.hpow		W	power http://$address/heater/update?heater_nr=4 $data
+mc.hpow 	min	0
+mc.hpow		max	0.1
+mc.hpowmax	R	max_power http://$address/heater/historical-data?heater_nr=4
+mc.hpowmax	W	max_power http://$address/heater/update?heater_nr=4 $data
+mc.hpowmax 	min	0
+mc.hpowmax	max	0.1
+# still 
+still.setp	W	setpoint http://$address/heater/update?heater_nr=3
+still.hpow	R	power http://$address/heater/historical-data?heater_nr=3
+still.hpow	W	power http://$address/heater/update?heater_nr=3 $data
+still.hpow	W	power http://$address/heater/update?heater_nr=3 $data
+still.hpow 	min	0
+still.hpow	max	0.1
+# full http request requires start and stop times added by the python code
+# first word gives if this is write or read 

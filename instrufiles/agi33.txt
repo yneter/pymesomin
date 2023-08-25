@@ -1,0 +1,25 @@
+freq   W   :FREQ $data Hz
+freq   R   :FREQ?
+volt   W   VOLT $data
+volt   R   VOLT?
+volthi W   VOLT:HIGH $data
+volthi R   VOLT:HIGH?
+voltlo W   VOLT:LOW $data
+voltlo R   VOLT:LOW?
+amp    R   VOLT?
+amp    W   VOLT $data
+offset R   VOLT:OFFSET?
+offset W   VOLT:OFFSET $data
+load   W   OUTPUT:LOAD: $data 
+load   R   OUTPUT:LOAD?
+% set agi.sin 1 
+sin    W   FUNC SIN
+% set agi.sin 1 
+squ    W   FUNC SQU
+pulsewidth   W     FUNC:PULSE:WIDTH $data
+pulsewidth   R     FUNC:PULSE:WIDTH?
+pulseperiod   W     FUNC:PULSE:PERIOD $data
+pulseperiod   R     FUNC:PULSE:PERIOD?
+alc	W	POW:ALC $data
+alc	R	POW:ALC?
+

@@ -1,0 +1,21 @@
+% V2?\n
+% V2\s2\n
+% OP2\s1\n % turn on 
+% OP2\s0\n % turn off 
+% I2O?\n % readout current 
+% I2?\n % maximal current 
+% I2 0.5\n % set max current 
+v1	R	V1?
+v2	R	V2?
+i1     R	I1O?
+i2     R	I2O?
+imax1	R	I1?
+imax2	R	I2?
+v1on	W	OP1 1
+v2on	W	OP2 1
+v1off	W	OP1 0
+v2off	W	OP2 0
+v1	W	V1 $data
+v2	W	V2 $data
+imax1	W	I1 $data
+imax2	W	I2 $data

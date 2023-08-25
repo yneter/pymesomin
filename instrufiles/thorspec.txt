@@ -1,0 +1,27 @@
+%integration time
+time 	R    time
+time	W    time $data
+time	min  0.005
+time 	max  2
+% reads spectrum 
+spec	R    spec
+% gives intregral of last read spectrum
+sum	R    last_spectrum_sum
+% to have a vector with wavelengths using:
+% hexp.instrument("thor").wavelengths()
+writespec W	writespec $data
+avspec  R    avspec
+resetav   W 	resetav
+% not implemented yet in python
+close	W    close
+reset	W    reset
+avspec0  R    avspec0
+resetav0   W 	resetav0
+active	W	active
+diff	R	diff
+% set thor.active 1 
+% set thor.resetav 1 
+% set thor.writespec 0 
+% record 0.1 100 waitspecBpar0Gauss.dat 
+% set thor.writespec 1 
+% record 0.1 1 avspecBpar0Gauss.dat 

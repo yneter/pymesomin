@@ -1,0 +1,33 @@
+# read voltmeter
+v1	R	conn 7,'AAAA'|volt?1|AAAA
+v2	R	conn 7,'AAAA'|volt?2|AAAA
+v3	R	conn 7,'AAAA'|volt?3|AAAA
+v4	R	conn 7,'AAAA'|volt?4|AAAA
+# summing amplifier 
+s1    R       conn 1,'AAAA'|CHAN?1|AAAA
+s2    R       conn 1,'AAAA'|CHAN?2|AAAA
+s3    R       conn 1,'AAAA'|CHAN?3|AAAA
+s4    R       conn 1,'AAAA'|CHAN?4|AAAA
+s1p    W       conn 1,'AAAA'|CHAN 1,+1|AAAA
+s2p    W       conn 1,'AAAA'|CHAN 2,+1|AAAA
+s3p    W       conn 1,'AAAA'|CHAN 3,+1|AAAA
+s4p    W       conn 1,'AAAA'|CHAN 4,+1|AAAA
+s1off    W       conn 1,'AAAA'|CHAN 1,0|AAAA
+s2off    W       conn 1,'AAAA'|CHAN 2,0|AAAA
+s3off    W       conn 1,'AAAA'|CHAN 3,0|AAAA
+s4off    W       conn 1,'AAAA'|CHAN 4,0|AAAA
+s1m    W       conn 1,'AAAA'|CHAN 1,-1|AAAA
+s2m    W       conn 1,'AAAA'|CHAN 2,-1|AAAA
+s3m    W       conn 1,'AAAA'|CHAN 3,-1|AAAA
+s4m    W       conn 1,'AAAA'|CHAN 4,-1|AAAA
+# parameters of PID loop
+pidstate R	conn 5,'AAAA'|AMAN?|AAAA
+pidon	 W	conn 5,'AAAA'|AMAN 1|AAAA
+pidoff	 W	conn 5,'AAAA'|AMAN 0|AAAA
+pidout	 R	conn 5,'AAAA'|OMON?|AAAA
+pidsetp  R	conn 5,'AAAA'|SETP?|AAAA
+pidsetp  W	conn 5,'AAAA'|SETP $data|AAAA
+pidmax   R	conn 5,'AAAA'|ULIM?|AAAA
+pidmax   W      conn 5,'AAAA'|ULIM $data|AAAA
+pgain	 R	conn 5,'AAAA'|GAIN?|AAAA
+pgain	 W	conn 5,'AAAA'|GAIN $data|AAAA

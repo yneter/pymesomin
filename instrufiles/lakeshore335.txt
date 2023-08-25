@@ -1,0 +1,7 @@
+% read temperature for A 
+Tmainsorb	  R	KRDG? a
+Tminisorb	  R	KRDG? b
+heater_minisorb_off		W	RANGE 2,0
+heater_mainsorb_off 		W	RANGE 1,0
+heater_minisorb_on		W	RANGE 2,1
+heater_mainsorb_on 		W	RANGE 1,1

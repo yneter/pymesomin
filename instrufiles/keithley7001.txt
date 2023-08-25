@@ -1,0 +1,20 @@
+# Query the current configuration of closed channels the K7001 (this is what we use to get get our contact configuration)
+closed		R	:CLOS? (@ 1!1!1:1!1!10,1!2!1:1!2!10,1!3!1:1!3!10,1!4!1:1!4!10,2!1!1:2!1!10,2!2!1:2!2!10,2!3!1:2!3!10,2!4!1:2!4!10)
+#closed      R   :CLOS? (@ ,$data,)
+#Query open channels
+opened		R	:OPEN? (@ 1!1!1:1!1!10,1!2!1:1!2!10,1!3!1:1!3!10,1!4!1:1!4!10,2!1!1:2!1!10,2!2!1:2!2!10,2!3!1:2!3!10,2!4!1:2!4!10)
+#opened      R   :OPEN? (@ ,$data,)
+#clear the K7001 by opening all channels
+clear		W 	:OPEN ALL;
+#open a list of channels (this is a general command for the K7001, but our specific use case utilizes the K7001 in such a way that a simple 10-digit string can be converted to any reasonable contact configuration needed.)
+open        W   :OPEN (@ ,$data,)
+#close a list of channels (same note as for the opening command)
+close       W   :CLOS (@ ,$data,)
+#Ground the sample
+ground      W   :CLOS (@1!1!10,1!2!10,1!3!10,1!4!10,2!1!10,2!2!10,2!3!10,2!4!10)
+#Hard ground the sample
+hardground  W   :CLOS (@1!1!8,1!2!8,1!3!8,1!4!8,2!1!8,2!2!8,2!3!8,2!4!8,1!1!10,1!2!10,1!3!10,1!4!10,2!1!10,2!2!10,2!3!10,2!4!10) 
+#reads config makes a call to readconfig 
+config	    R	config
+#set config alls to K7001_set - setconfig configuration_number
+config	    W	setconfig

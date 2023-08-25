@@ -1,0 +1,18 @@
+%initialisation
+%init	R	OS|H0|E
+%lecture trace
+trace R INIT;*WAI;TRAC? TRACE1
+%trace R *WAI;TRAC? TRACE1
+tracenowait R TRAC? TRACE1; INIT  
+%tracenowait R TRAC? TRACE1
+tracenowait W INIT
+trace W INIT;
+tracewrS W AVERage:CLE
+%tracewrS R TRAC? CH1DATA
+tracewrS R CALCulate:MARK:Y?
+tracewrC R *WAI;AVERage:CLE
+%traceS21 W AVERage:CLE
+traceS21 R CALCulate:DATA? Fdata
+%traceS21 R *WAI; CALCULATE:DATA? Fdata; AVERage:CLE
+traceS21smthon W CALC:SMO ON
+traceS21smthoff W CALC:SMO OFF

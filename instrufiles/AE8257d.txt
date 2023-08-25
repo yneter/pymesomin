@@ -1,0 +1,39 @@
+% frequency
+freq	R	FREQ:CW?
+freq	W	FREQ $data Hz
+% amplitude
+amp	R	POW:AMPL?
+amp	W	POW:AMPL $data dBm
+% dev 
+amfreq   R       :SOUR:AM1:INT1:FREQ?
+amfreq   W       :SOUR:AM1:INT1:FREQ $data
+% FM
+fmfreq   R       :SOUR:FM1:INT1:FREQ?
+fmfreq   W       :SOUR:FM1:INT1:FREQ $data
+% depth
+fmdev   R       :SOUR:FM1:DEV?
+fmdev   W       :SOUR:FM1:DEV $data
+%
+output  R       OUTPUT:STATE?
+rfon    W       OUTPUT:STATE 1
+rfoff   W       OUTPUT:STATE 0
+%
+modstate R 	OUTPUT:MOD:STATE?
+modon    W	OUTPUT:MOD:STATE 1
+modoff 	 W 	OUTPUT:MOD:STATE 0 
+% automatic level control
+alc	W	POW:ALC $data
+alc	R	POW:ALC?
+%
+pulsePer W	PULM:INT:PER $data
+pulsePer R	PULM:INT:PER?
+%
+pulseLen W	PULM:INT:PWID $data
+pulseLen R	PULM:INT:PWID?
+% modulation sate 
+pulsemod W 	PULM:STATE $data
+pulsemod R 	PULM:STATE?
+fmmod    W	FM:STATE $data
+fmmod	 R 	FM:STATE?
+ammod    W	AM:STATE $data
+ammod	 R 	AM:STATE?

@@ -1,0 +1,23 @@
+%initialisation
+% init	R	OS|H0|E
+% Output ON/OFF Control
+% out     W       O$data|E
+field   R	GETDAT? 4 1
+temp    R	GETDAT? 2 1
+tempsetp R	TEMP?
+temp5  W	TEMP $data 5 0
+temp10  W	TEMP $data 10 0
+temp20  W	TEMP $data 20 0
+level	R	LEVEL?
+field5	W	FIELD $data 5 0 0
+field10	W	FIELD $data 10 0 0
+field20	W	FIELD $data 20 0 0
+field25	W	FIELD $data 25 0 0
+field50	W	FIELD $data 50 0 0
+field100	W	FIELD $data 100 0 0
+field180	W	FIELD $data 180 0 0
+field180NP	W	FIELD $data 180 0 1
+
+
+
+

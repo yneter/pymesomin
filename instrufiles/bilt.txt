@@ -1,0 +1,20 @@
+%initialisation
+init	R	*idn?
+% Output ON/OFF Control
+on     W       outp on
+off     W       outp off
+% DC voltage autorange
+dcav	W	F1|E|SA$data|E
+dcav	R	OD
+% DC voltage in a predefined range
+dcv5	W	i5|volt $data
+dcv5	R	i5|meas:volt?
+% DC current autorange
+dcai	W	F5|E|SA$data|E
+dcai	R	OD
+% DC voltage in a predefined range
+dci	W	S$data|E
+dci	R	OD
+%Range
+rg12 	W	volt:rang 12
+rg1 	W	volt:rang 1.2

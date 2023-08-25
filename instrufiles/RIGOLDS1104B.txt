@@ -1,0 +1,35 @@
+%ATTENTION : L'Oscillo doit etre en mode ASCII !!
+%init	I	*IDN?
+value	R	WAV:DATA?
+trace1	R	WAV:DATA? CHAN1
+trace2	R	WAV:DATA? CHAN2
+trace3	R	WAV:DATA? CHAN3
+trace4	R	WAV:DATA? CHAN4
+reset1  W	resetav1
+dtime1  R 	WAV:XINC? CHAN1
+dtime2  R 	WAV:XINC? CHAN2
+dtime3  R 	WAV:XINC? CHAN3
+dtime1  R 	WAV:XINC? CHAN4
+format	R	WAV:FORM?
+units1	R	CHAN1:UNIT?
+units2	R	CHAN2:UNIT?
+points  R 	WAV:POINTS?
+avrigol	R	ACQ:AVER?
+avrigol	W	ACQ:AVER $data
+ascii   W	WAV:FORM ASC
+% set rigol.active 1 
+% to read full traces with get rigol.trace1
+% set rigol.active 0 
+% to just return 0 with get rigol.trace1
+% set rigol.active 2 
+% returns averaged trace
+% set rigol.reset1 1 
+% resets running average for trace 1 
+% measure 
+% rigol.dtime1,rigol.trace1,rigol.trace2
+active  W	active $data
+% single trigger to run we have top stop first ...
+single	W	SINGLE
+run	W	RUN
+stop	W	STOP
+trigstate R	TRIG:STAT?

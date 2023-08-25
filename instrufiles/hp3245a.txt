@@ -1,0 +1,28 @@
+%initialisation
+init	R	CLR|SCRATCH|END ON|ID?
+% apply dc voltage on channel A
+adcv	W	USE CHANA|APPLY DCV $data
+adcv	R	USE CHANA|OUTPUT?
+% apply dc current on channel A
+adci	W	USE CHANA|APPLY DCI $data
+adci	R	USE CHANA|OUTPUT?
+% apply ac current on channel A
+aaci	W	USE CHANA|APPLY ACI $data
+aaci	R	USE CHANA|OUTPUT?
+% apply ac voltage on channel A
+aacv	W	USE CHANA|APPLY ACV $data
+aacv	R	USE CHANA|OUTPUT?
+%idem for channel B
+bvdc	W	USE CHANB|APPLY DCV $data
+bvdc	R	USE CHANB|OUTPUT?
+bdci	W	USE CHANB|APPLY DCI $data
+bdci	R	USE CHANB|OUTPUT?
+baci	W	USE CHANB|APPLY ACI $data
+baci	R	USE CHANB|OUTPUT?
+bacv	W	USE CHANB|APPLY ACV $data
+bacv	R	USE CHANB|OUTPUT?
+% set the frequency
+afreq	W	USE CHANA|FREQ $data
+afreq	R	USE CHANA|FREQ?
+bfreq	W	USE CHANB|FREQ $data
+bfreq	R	USE CHANB|FREQ?

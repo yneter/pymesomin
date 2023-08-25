@@ -1,0 +1,15 @@
+% read field
+field	R	FIELD:MAGNET?
+% read target field
+target 	R	FIELD:TARGET?
+% set target field
+field	W	CONFIGURE:FIELD:TARGET $data
+field   MAX 	9
+field   MIN 	-9
+volt	R	VOLT:MAGNET?
+rate	R	RAMP:RATE:FIELD:1?
+rate	W	CONF:RAMP:RATE:FIELD 1,$data,9
+rate	MAX	0.1
+rate	MIN 	0
+ramp	W	RAMP
+state	R	STATE?

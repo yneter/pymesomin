@@ -1,0 +1,14 @@
+%initialisation
+init	I    init
+% write and read 
+step        W     forward
+start       W     start
+back        W     back
+close       W     CLOSE
+speed       W     speed
+back        R     back 
+step        R     step
+start       R     start
+close       R     CLOSE
+speed       R     speed
+

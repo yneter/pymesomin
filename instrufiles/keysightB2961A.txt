@@ -1,0 +1,21 @@
+%initialisation
+init    R    *CLS|*IDN?
+%DC current in a predefined range
+%dcv    R    :SENSE:VOLT
+%dcv    R    :SOUR:VOLT:LEVEL?
+%dcv    R    :SOUR:VOLT:LEVEL?
+dcv    R    :SOUR:VOLT:AMPL?
+dcv    W    :SOUR:VOLT:AMPL $data
+dci    R    :SOUR:CURR:AMPL?
+dci    W    :SOUR:CURR:AMPL $data
+mi	R 	:MEAS:CURR?
+mv	R	:MEAS:VOLT?
+mres	R	:MEAS:RES?
+arange  R   :SOUR:CURR:RANGE?
+arange  W   :SOUR:CURR:RANGE $data
+vrange  R   :SOUR:VOLT:RANGE?
+vrange  W   :SOUR:VOLT:RANGE $data
+aauto   W   :CURR:RANG:AUTO $data
+aauto 	R   :CURR:RANG:AUTO?
+vauto  R   :SOUR:VOLT:RANG:AUTO ?
+vauto  W   :SOUR:VOLT:RANG:AUTO $data

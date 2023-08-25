@@ -1,0 +1,7 @@
+%initialisation
+%init	R	OS|H0|E
+% Output ON/OFF Control
+dcv	W	SOURCE:VOLT:LEV $data
+dcv	R	SOURCE:VOLT:LEV?
+dci	W	SOURCE:CURR:LEV $data
+dci	R	SOURCE:CURR:LEV?

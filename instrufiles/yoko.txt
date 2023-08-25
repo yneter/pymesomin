@@ -1,0 +1,16 @@
+%initialisation
+init	R	OS|H0|E
+% Output ON/OFF Control
+out     W       O$data|E
+% DC voltage autorange
+dcav	W	F1|E|SA$data|E
+dcav	R	OD
+% DC voltage in a predefined range
+dcv	W	S$data|E
+dcv	R	OD
+% DC current autorange
+dcai	W	F5|E|SA$data|E
+dcai	R	OD
+% DC voltage in a predefined range
+dci	W	S$data|E
+dci	R	OD

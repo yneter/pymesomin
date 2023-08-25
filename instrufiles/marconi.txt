@@ -1,0 +1,8 @@
+%initialisation
+init	I	*OPC?;*CLS;*IDN?
+% oscillator amplitude
+amp	R	RFLV?
+amp	W	RFLV $data
+% oscillator frequency
+freq	R	CFRQ?
+freq	W	CFRQ $data

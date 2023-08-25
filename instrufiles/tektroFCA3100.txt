@@ -1,0 +1,21 @@
+%initialisation
+init	I	*IDN?
+%lire valeur
+value	R	READ?
+% mean : valeur moyenne calculée après acquisition de nouvelles données
+% &mean : valeur moyenne calculée sur les datas déjà en mémoire
+mean	R	CALC:AVER:STAT ON;TYPE MEAN;:INIT;*WAI;CALC:DATA?
+&mean	R	CALC:AVER:STAT ON;TYPE MEAN|CALC:IMM?
+dev	R	CALC:AVER:STAT ON;TYPE SDEV;:INIT;*WAI;CALC:DATA?
+&dev	R	CALC:AVER:STAT ON;TYPE SDEV|CALC:IMM?
+%array : array of values trigged from the command:value mode,gpibw 10 ARM:COUN 500 useful sometimes!
+array	R	ARM:COUN 150|READ:ARRAY? 150
+array10	R	ARM:COUN 10|READ:ARRAY? 10
+array50	R	ARM:COUN 50|READ:ARRAY? 50
+array25	R	ARM:COUN 25|READ:ARRAY? 25
+array100	R	ARM:COUN 100|READ:ARRAY? 100
+array500	R	ARM:COUN 500|READ:ARRAY? 500
+array250	R	ARM:COUN 250|READ:ARRAY? 250
+%in order to record histogram, set counter to single by pressing VALUE not HOLD. record command won't work
+%use dummy sweep instead.
+%set wait time in HAL

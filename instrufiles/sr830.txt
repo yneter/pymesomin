@@ -1,0 +1,64 @@
+% oscillator amplitude
+amp	R	SLVL?
+amp	W	SLVL $data
+% phase 
+phase	R	PHAS?
+phase	W	PHAS $data
+% oscillator frequency
+freq	R	FREQ?
+freq	W	FREQ $data
+% sensitivity
+sens	R	SENS?
+sens	W	SENS $data
+% auxilary output
+dac1	R	AUXV ? 1
+dac1	W	AUXV 1 ,$data
+dac1	min	-10
+dac1	max	10
+dac2	R	AUXV ? 2
+dac2	W	AUXV 2 ,$data
+dac2	min	-10
+dac2	max	10
+dac3	R	AUXV ? 3
+dac3	W	AUXV 3 ,$data
+dac3	min	-10
+dac3	max	10
+dac4	R	AUXV ? 4
+dac4	W	AUXV 4 ,$data
+dac4	min	-10
+dac4	max	10
+% auxilary output - version with arguments 
+dac	W	AUXV $arg1 ,$data
+dac	R	AUXV ? $arg1
+dac	min	$arg1 1
+dac	max	$arg1 4
+% harmonic 
+harm	R	HARM?
+harm	W	HARM $data
+% measurements
+x	R	OUTP ? 1
+y	R	OUTP ? 2
+r	R	OUTP ? 3
+theta	R	OUTP ? 4
+% aux input 
+adc1    R       OAUX ? 1
+adc2    R       OAUX ? 2
+adc3    R       OAUX ? 3
+adc4    R       OAUX ? 4
+% Input Configuration to A (0), A-B (1) , I (1 MO) (2) or I (100 MO) (3).
+isrc    R       ISRC?
+% Set (Query) the Time Constant to 10 µs (0) through 30 ks (19).
+timecst W       OFLT $data
+timecst R       OFLT?
+% internal reference FMOD 1
+modint  W       FMOD $data
+modint  R       FMOD?
+% expand off 
+xpexpoff	W	OEXP 1,0,0
+ypexpoff	W	OEXP 2,0,0
+xpexp10		W	OEXP 1,0,1
+ypexp10		W	OEXP 2,0,1
+% 
+% Set (Query) the Low Pass Filter Slope to 6 (0), 12 (1), 18 (2) or 24 (3) dB/oct.
+slope		R	OFSL?
+slope		W 	OFSL $data

@@ -1,0 +1,54 @@
+# $arg1 = c1,c2,c3,c4 scope channels
+# for example get lecroy.waveform c1
+c1waveform R	C1:WAVEFORM? ALL
+waveform R	$arg1:WAVEFORM? ALL
+offset	 R	$arg1:INSP? HORIZ_OFFSET
+gain	 R	$arg1:INSP? FIXED_VERT_GAIN
+# set lecroy.gain_mV 20 c1
+gain	 W	$arg1:VDIV $data mV
+Vgain	 W	$arg1:VDIV $data V
+data 	 R	$arg1:INSP? FIXED_VERT_GAIN
+nav	 R	$arg1:INSP? SWEEPS_PER_ACQ
+coupling R 	$arg1:CPL?
+averages R	vsb 'app.Acquisition.$arg1.AverageSweeps'
+resetav	 W	vbs 'app.Acquisition.ClearSweeps'
+mean	 R	mean_from_last_read_waveform
+var	 R	variance_from_last_read_waveform
+# enable/disable full waveform return as string
+writewave	W	writewave $data
+% example code:
+% hexp.set("lecroy.writewave 0")
+% hexp.instrument("lecroy").report_function = np.var
+% hexp.get("lecroy.waveform c1") 
+% to record variance of a channel
+#
+c1AC1M W	C1:CPL A1M
+c1DC1M W	C1:CPL D1M
+c1DV50 W	C1:CPL D50
+c1data		R	C1:INSP? DATA_ARRAY_1, float
+c1nav		R	C1:INSP? SWEEPS_PER_ACQ
+c1trigtime	R	C1:INSP? TRIGTIME
+c1ristime	R	C1:INSP? RISTIME
+c1gain		R	C1:INSP? FIXED_VERT_GAIN
+c1timebase	R	C1:INSP? TIMEBASE, float
+c1timeoffset 	R	C1:INSP? HORIZ_OFFSET
+c1arraysize	R	C1:INSP? WAVE_ARRAY_COUNT
+c1timeinterval	R	C1:INSP? HORIZ_INTERVAL
+c1offset 	R	C1:INSP? ACQ_VERT_OFFSET
+c1waveform	R	C1:WAVEFORM? ALL
+c2	R	C2:INSP? DATA_ARRAY_1, float
+c3	R	C3:INSP? DATA_ARRAY_1, float
+c4	R	C4:INSP? DATA_ARRAY_1, float
+m1	R	M1:INSP? DATA_ARRAY_1, float
+% template gives the format for INSP? 
+template R	TEMPLATE?
+spec	R	SpecAn:INSP? DATA_ARRAY_1, float
+stop	W 	STOP
+single 	W	ARM_ACQUISITION
+force	W	FORCE_TRIGGER
+spectest1 	R 	SpecAn:WaveForm? DAT1
+storeSetup	R	STORE_SETUP?
+storeSpec	R	STO SpecAn,FILE
+storeSpec	W	CLSW
+WFM1	R	M1:WaveForm? DAT2
+clearSpec	W	ClearSweeps

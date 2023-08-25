@@ -1,0 +1,10 @@
+temp	R	R1
+setp	R	R0
+setp	W	T$data
+temp	W	T$data
+auto	W	A1
+autogas	W	A3
+remote	W	C01
+local	W	C10
+gas	R	R7
+gas	W	G$data

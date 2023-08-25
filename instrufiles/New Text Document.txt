@@ -1,0 +1,20 @@
+% on COM6
+field	  R	G O
+field	  W	S M $data
+field	  MAX	1
+field	  MIN   -1
+rate	  W	S R $data
+rate	  R	G R
+setfield  R	G M
+status	  R	R S
+tozero	  W	R 0
+tomid	  W	R MID
+sign	  R	G S
+positive  W	D +
+negative  W	D - 
+heateron  W	H 1
+heateroff W 	H 0
+heatervolt R	G H
+pauseon	  W	P 1
+pauseoff  W	P 0
+% default rate 0.1A/sec

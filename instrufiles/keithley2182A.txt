@@ -1,0 +1,8 @@
+% trigger measurement and return result 
+dcv	R	READ?
+% returns last measurement
+sense	R	FETCH?
+% initialize measurement 
+init	W	INIT
+% continuous aquisition 
+cont	W	INIT:CONT ON

@@ -1,0 +1,25 @@
+%initialisation
+init	I	*CLS|SYST:VERS?
+%lecture des differentes voies
+dc1	R	MEAS:VOLT:DC? (@101)
+ac1	R	MEAS:VOLT:AC? (@101)
+dc2	R	MEAS:VOLT:DC? (@102)
+ac2	R	MEAS:VOLT:AC? (@102)
+dc3	R	MEAS:VOLT:DC? (@103)
+ac3	R	MEAS:VOLT:AC? (@103)
+dc4	R	MEAS:VOLT:DC? (@104)
+ac4	R	MEAS:VOLT:AC? (@104)
+dc5	R	MEAS:VOLT:DC? (@105)
+ac5	R	MEAS:VOLT:AC? (@105)
+dc6	R	MEAS:VOLT:DC? (@106)
+ac6	R	MEAS:VOLT:AC? (@106)
+dc7	R	MEAS:VOLT:DC? (@107)
+ac7	R	MEAS:VOLT:AC? (@107)
+dc8	R	MEAS:VOLT:DC? (@108)
+ac8	R	MEAS:VOLT:AC? (@108)
+dc9	R	MEAS:VOLT:DC? (@109)
+ac9	R	MEAS:VOLT:AC? (@109)
+dc10	R	MEAS:VOLT:DC? (@110)
+ac10	R	MEAS:VOLT:AC? (@110)
+
+

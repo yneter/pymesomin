@@ -1,0 +1,21 @@
+% read temperature for A 
+Tvti	  R	KRDG? a
+Tsample   R	KRDG? b
+Tset_vti  R	SETP? 1
+Tvti  	  W	SETP 1,$data
+Tset_sample  R	SETP? 2
+Tsample   W	SETP 2,$data
+Tc	  R	SETP? c
+Td	  R	SETP? d
+Tset_vti  MAX 	330
+Tset_sample  MAX 	330
+Mout1	 R	MOUT? 1
+Mout2	 R	MOUT? 2
+Mout3	 R	MOUT? 3
+Mout4	 R	MOUT? 4
+heater_sample_on	W	RANGE 2,1
+heater_vti_on 		W	RANGE 1,1
+heater_he4pot_on	W	RANGE 3,1
+heater_sample_off	W	RANGE 2,0
+heater_vti_off 		W	RANGE 1,0
+heater_he4pot_off	W	RANGE 3,0

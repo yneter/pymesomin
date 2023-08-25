@@ -1,0 +1,10 @@
+%initialisation
+init	I    init
+%statut du monochromateur
+lambda  W    lambda
+lambda  R    lambda
+grating R    grating
+grating W    grating
+blaze   R    blaze
+filter	R	filter
+filter	W	filter

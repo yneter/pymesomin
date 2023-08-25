@@ -1,0 +1,22 @@
+amp   R   R0
+volt  R   R1
+field R   R7
+heateri R R20
+henry R   R24
+trapedfield R   R18
+% rate in tesla/minutes 
+rate  R   R9
+arate R	  R6
+amp   W   I
+field W   J
+remote W  C3
+rate  W   T
+% heater current in milliamps
+iheater R  R20
+% set ox.heateron 1 % to turn on switch 
+heateron W H1
+forceheateron W H2
+heateroff W H0
+tosetpoint W A1
+hold       W A0
+

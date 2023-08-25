@@ -1,0 +1,5 @@
+amp	R	OA
+amp	W	OA $data
+x	R	X
+y	R	Y
+freq	R	FRQ

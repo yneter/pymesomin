@@ -1,0 +1,9 @@
+# the first value give usb wIndex code - then comes the data type int or float 
+init	W	0
+lambda	R	2 float
+lambda	W	4 float $data
+busy	R	5 int
+turret 	R	16 int 
+turret	W	17 int $data
+turret	min	0
+turret  max 	2
