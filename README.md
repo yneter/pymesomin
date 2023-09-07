@@ -4,7 +4,7 @@ This is a python code to interact and automatize measurements on a collection of
 We have used it mainly on cryogenic magnets (commericial systems from Bluefors/Cryogenics limited
 and home made systems). This is the result of an evolution of Labview/python codes developed in the Meso group at Laboratoire de physique des solides.
 
-Particularities of this code are the following :
+Particularities of this code are the following : https://equipes2.lps.u-psud.fr/meso/
 
 **Minimal coding requirements to add new instruments** 
 
